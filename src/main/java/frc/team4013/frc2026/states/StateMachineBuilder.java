@@ -12,7 +12,7 @@ public class StateMachineBuilder {
         this.map = new HashMap<String, State>();
         starting = state = null;
     }
-    
+
     public StateMachineBuilder state(String name) {
         if(starting == null) {
             starting = state = new State();
@@ -25,7 +25,7 @@ public class StateMachineBuilder {
         state.starts.add(f);
         return this;
     }
-    
+
     public StateMachineBuilder run(Runnable f) {
         state.runs.add(f);
         return this;
@@ -35,7 +35,7 @@ public class StateMachineBuilder {
         state.ends.add(f);
         return this;
     }
-    
+
     public StateMachineBuilder next(Supplier<Boolean> p, String name) {
         state.nexts.add(()->p.get()?name:null);
         return this;
@@ -57,5 +57,5 @@ public class StateMachineBuilder {
             .run(()->{})
             .end(()->{})
             .next(()->true, "");
-    } 
+    }
 }

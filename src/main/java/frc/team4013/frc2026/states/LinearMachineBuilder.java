@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-import frc.team4013.frc2026.states.LinearState;
 
 public class LinearMachineBuilder {
     List<LinearState> states;

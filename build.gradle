@@ -1,3 +1,5 @@
+import java.nio.charset.StandardCharsets
+
 plugins {
     id "java"
     id "idea"
@@ -127,4 +129,23 @@ gversion {
     timeZone     = "America/New_York"
     indent       = "  "
 }
+
+
+// Spotless formatting
+project.compileJava.dependsOn(spotlessApply)
+spotless {
+    java {
+        target fileTree('.') {
+            include '**/*.java'
+            exclude '**/build/**', '**/build-*/**'
+        }
+        toggleOffOn()
+        removeUnusedImports()
+        importOrder('', 'java', '\\#').wildcardsLast()
+        trimTrailingWhitespace()
+        setEncoding(StandardCharsets.UTF_8)
+        indentWithSpaces(4)
+    }
+}
+
 

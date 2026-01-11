@@ -1,8 +1,5 @@
 package frc.team4013.frc2026.hardware;
 
-import com.ctre.phoenix6.CANBus;
-import com.ctre.phoenix6.hardware.TalonFX;
-import com.ctre.phoenix6.signals.InvertedValue;
 
 public class MotorPair extends Motor {
     public Motor other;
@@ -11,12 +8,12 @@ public class MotorPair extends Motor {
         super(id0);
         other = new Motor(id1);
     }
-    
+
     public MotorPair(int id0, int id1, String bus) {
         super(id0, bus);
         other = new Motor(id1, bus);
     }
-    
+
     public void setPower(double speed) {
         super.setPower(speed);
         other.setPower(speed);

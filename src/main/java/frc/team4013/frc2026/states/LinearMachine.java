@@ -2,7 +2,6 @@ package frc.team4013.frc2026.states;
 
 import java.util.List;
 
-import frc.team4013.frc2026.states.LinearState;
 
 public class LinearMachine {
     List<LinearState> states;

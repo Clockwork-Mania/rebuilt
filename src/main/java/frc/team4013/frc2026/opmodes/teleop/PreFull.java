@@ -1,13 +1,14 @@
 package frc.team4013.frc2026.opmodes.teleop;
 
-import java.util.List;
-import java.util.function.Predicate;
-
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4013.frc2026.opmodes.Opmode;
 import frc.team4013.frc2026.hardware.*;
+import frc.team4013.frc2026.opmodes.Opmode;
+import org.littletonrobotics.junction.Logger;
+
+import java.util.List;
+import java.util.function.Predicate;
 
 public class PreFull implements Opmode {
     Grinder bot;
@@ -42,6 +43,8 @@ public class PreFull implements Opmode {
             r = con0.getRightX()*.4;
         bot.base.drive(s, f, r, true);
         bot.base.periodic();
+
+//        Logger.recordOutput("Controller Input", );
 
         SmartDashboard.putNumber("forward", f);
         SmartDashboard.putNumber("strafe", s);
@@ -144,7 +147,7 @@ public class PreFull implements Opmode {
         //     // bot.arm.setTarget(Arm.CORAL_L1);
         //     // intake = false;
         // }
-        
+
         // if(coralPrep && prepTimer.hasElapsed(3)) {
         //     bot.arm.setTarget(Arm.CORAL_INTAKE);
         //     coralPrep = false;
@@ -154,7 +157,7 @@ public class PreFull implements Opmode {
         SmartDashboard.putBoolean("Intaking?", intake);*/
 
         // ---------------- CLAW --------------- //
-    
+
         // if(either(CWController::getRightTriggerButton)) {
         //     if (coral) {
         //         if (intake) {
@@ -163,7 +166,7 @@ public class PreFull implements Opmode {
         //         else {
         //             bot.arm.claw.set(Claw.OUTTAKE_CORAL);
         //         }
-        //     } 
+        //     }
         //     else {
         //         if (intake) {
         //             bot.arm.claw.set(Claw.INTAKE_ALGAE);
@@ -173,7 +176,7 @@ public class PreFull implements Opmode {
         //         }
         //     }
         // }
-        
+
         // if(either(CWController::getLeftTriggerButton)) {
         //     if (coral) {
         //         if (intake) {
@@ -182,7 +185,7 @@ public class PreFull implements Opmode {
         //         else {
         //             bot.arm.claw.set(Claw.INTAKE_CORAL);
         //         }
-        //     } 
+        //     }
         //     else {
         //         if (intake) {
         //             bot.arm.claw.set(Claw.OUTTAKE_ALGAE);
@@ -198,4 +201,3 @@ public class PreFull implements Opmode {
         // }
     }
 }
-

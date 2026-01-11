@@ -189,3 +189,4 @@ compile_commands.json
 src/main/java/frc/team4013/frc2026/BuildConstants.java
 simgui-window.json
 simgui.json
+simgui-ds.json

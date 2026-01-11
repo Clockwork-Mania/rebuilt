@@ -18,7 +18,7 @@ import frc.team4013.frc2026.Utility;
 public class Swerve extends SubsystemBase  {
     // order is fl, bl, fr, br
     public SwerveModule frontLeft, backLeft, frontRight, backRight;
-    public SwerveModule wheels[] = {frontLeft, backLeft, frontRight, backRight};
+    public SwerveModule wheels[];
 
     private final ADIS16448_IMU gyro = new ADIS16448_IMU();
 
@@ -42,6 +42,8 @@ public class Swerve extends SubsystemBase  {
         backLeft   = new SwerveModule(4, 8, 12, .536);
         frontRight = new SwerveModule(2, 6, 10, .770);
         backRight  = new SwerveModule(5, 9, 13, .309);
+        wheels = new SwerveModule[]{frontLeft, backLeft, frontRight, backRight};
+
         odo = new SwerveDriveOdometry(kin, heading2d(), positions());
         targetMode = TargetMode.None;
     }

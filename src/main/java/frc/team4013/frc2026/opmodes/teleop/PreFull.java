@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team4013.frc2026.hardware.*;
 import frc.team4013.frc2026.opmodes.Opmode;
+import org.littletonrobotics.junction.Logger;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -43,7 +44,13 @@ public class PreFull implements Opmode {
         bot.base.drive(s, f, r, true);
         bot.base.periodic();
 
-//        Logger.recordOutput("Controller Input", );
+        Logger.recordOutput("Controller Forward Input", f);
+        Logger.recordOutput("Controller Strafe Input", s);
+        Logger.recordOutput("Controller Rotation Input", r);
+        for (int i = 0; i < bot.base.wheels.length; i++) {
+            Logger.recordOutput("Module " + i + " Spin Power", bot.base.wheels[i].spinMotorPower);
+            Logger.recordOutput("Module " + i + " Power Power", bot.base.wheels[i].powerMotorPower);
+        }
 
         SmartDashboard.putNumber("forward", f);
         SmartDashboard.putNumber("strafe", s);
@@ -56,7 +63,7 @@ public class PreFull implements Opmode {
         ) {
             bot.base.resetGyro();
         }
-
+        
         // if(either(CWController::getXButton)) {
         //     bot.arm.startSeq(Arm.CORAL_READY_SEQ);
         // }

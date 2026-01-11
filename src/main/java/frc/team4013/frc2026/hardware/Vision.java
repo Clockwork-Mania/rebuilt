@@ -11,9 +11,13 @@ import frc.team4013.frc2026.LimelightHelpers;
 public class Vision{
     double tx = 0;
 
+    public Vision() {
+        LimelightHelpers.setPipelineIndex("limelight-b", 1);
+    }
+
     public void updateTX(){
+        tx = LimelightHelpers.getTX("limelight-b");
         SmartDashboard.putNumber("tx: ", tx);
-        tx = LimelightHelpers.getTX("b");
     }
 }
 // public class Vision {

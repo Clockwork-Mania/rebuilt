@@ -48,6 +48,8 @@ public class SwerveModule {
 
     public double maxAccel = 0.01;
     public double lastPower = 0;
+    public double powerMotorPower = 0;
+    public double spinMotorPower = 0;
 
     public void pidSpin(double target, double dt, double speed) {
         double err = target - spinPos();
@@ -64,9 +66,11 @@ public class SwerveModule {
         }
 
         // calculate power using kp, ki, kd
-        spin.setPower(-(Math.abs(err) > spinDeadband ?
-            kpSpin * err + kiSpin * errSum + kdSpin * ((err-lastErr)/dt)
-        :0));
+        spinMotorPower = -(Math.abs(err) > spinDeadband ?
+                kpSpin * err + kiSpin * errSum + kdSpin * ((err-lastErr)/dt)
+                :0);
+        spin.setPower(spinMotorPower);
+
 
         // update integral and derivative quanitites
         errSum += err;
@@ -82,7 +86,8 @@ public class SwerveModule {
         }
         // if(speed - lastPower > maxAccel) speed = lastPower + Math.signum(lastPower) * maxAccel;
         speed = (speed > 1 ? 1 : (speed < -1 ? -1 : speed));
-        power.setPower(reversed ? -speed : speed);
+        powerMotorPower = reversed ? -speed : speed;
+        power.setPower(powerMotorPower);
         lastPower = speed;
 
         // spin.setPID(kpSpin, kiSpin, kdSpin);

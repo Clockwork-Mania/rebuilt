@@ -63,7 +63,7 @@ public class PreFull implements Opmode {
         ) {
             bot.base.resetGyro();
         }
-        
+
         // if(either(CWController::getXButton)) {
         //     bot.arm.startSeq(Arm.CORAL_READY_SEQ);
         // }

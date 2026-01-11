@@ -12,5 +12,7 @@ public class testLimelight implements Opmode{
 
     public void periodic() {
         bot.vision.updateTX();
+        bot.vision.updateTY();
     }
+
 }

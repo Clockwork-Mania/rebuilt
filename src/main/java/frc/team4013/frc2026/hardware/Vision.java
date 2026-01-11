@@ -10,7 +10,7 @@ import frc.team4013.frc2026.LimelightHelpers;
 // import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Vision{
     double tx = 0;
-
+    double ty = 0;
     public Vision() {
         LimelightHelpers.setPipelineIndex("limelight-b", 1);
     }
@@ -18,6 +18,11 @@ public class Vision{
     public void updateTX(){
         tx = LimelightHelpers.getTX("limelight-b");
         SmartDashboard.putNumber("tx: ", tx);
+    }
+
+    public void updateTY(){
+        ty = LimelightHelpers.getTY("limelight-b");
+        SmartDashboard.putNumber("ty: ", ty);
     }
 }
 // public class Vision {

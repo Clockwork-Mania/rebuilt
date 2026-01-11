@@ -1,14 +1,21 @@
 // package frc.robot.hardware;
+package frc.team4013.frc2026.hardware;
 
-// // import org.photonvision.PhotonCamera;
-// // import org.photonvision.targeting.PhotonPipelineResult;
-
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.team4013.frc2026.LimelightHelpers;
 // import edu.wpi.first.net.PortForwarder;
 // import edu.wpi.first.networktables.NetworkTable;
 // import edu.wpi.first.networktables.NetworkTableEntry;
 // import edu.wpi.first.networktables.NetworkTableInstance;
 // import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+public class Vision{
+    double tx = 0;
 
+    public void updateTX(){
+        SmartDashboard.putNumber("tx: ", tx);
+        tx = LimelightHelpers.getTX("b");
+    }
+}
 // public class Vision {
 //     public class CamTarget {
 //         public double yaw, area;

@@ -2,7 +2,8 @@ package frc.team4013.frc2026.opmodes;
 
 // import frc.robot.opmodes.auto.*;
 import frc.team4013.frc2026.opmodes.teleop.*;
-import frc.team4013.frc2026.opmodes.test.testLimelight;
+import frc.team4013.frc2026.opmodes.test.*;
+
 
 public class OpmodeList {
     public static class NamedOpmode {
@@ -45,6 +46,6 @@ public class OpmodeList {
         // new NamedOpmode("Targeting", Targeting.class)
         // new NamedOpmode("Position Test", PositionTesting.class),
         // new NamedOpmode("Elevator Test", ElevatorTest.class)
-         new NamedOpmode("Limelight Test", testLimelight.class)
+        new NamedOpmode("Shooter test", testShooter.class)
     };
 }

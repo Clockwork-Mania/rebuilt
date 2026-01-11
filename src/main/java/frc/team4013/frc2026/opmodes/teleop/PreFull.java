@@ -5,7 +5,6 @@ import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team4013.frc2026.hardware.*;
 import frc.team4013.frc2026.opmodes.Opmode;
-import org.littletonrobotics.junction.Logger;
 
 import java.util.List;
 import java.util.function.Predicate;

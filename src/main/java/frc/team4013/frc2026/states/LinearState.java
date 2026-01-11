@@ -1,8 +1,7 @@
-package frc.robot.states;
+package frc.team4013.frc2026.states;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class LinearState {

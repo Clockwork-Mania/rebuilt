@@ -1,15 +1,13 @@
-package frc.robot.opmodes.teleop;
+package frc.team4013.frc2026.opmodes.teleop;
 
 import java.util.List;
 import java.util.function.Predicate;
 
-import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.opmodes.Opmode;
-import frc.robot.hardware.*;
+import frc.team4013.frc2026.opmodes.Opmode;
+import frc.team4013.frc2026.hardware.*;
 
 public class PreFull implements Opmode {
     Grinder bot;

@@ -1,10 +1,10 @@
-package frc.robot.states;
+package frc.team4013.frc2026.states;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Supplier;
+
+import frc.team4013.frc2026.states.LinearState;
 
 public class LinearMachineBuilder {
     List<LinearState> states;

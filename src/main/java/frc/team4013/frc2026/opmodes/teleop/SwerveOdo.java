@@ -1,11 +1,11 @@
-package frc.robot.opmodes.teleop;
+package frc.team4013.frc2026.opmodes.teleop;
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.opmodes.Opmode;
-import frc.robot.hardware.Grinder;
-import frc.robot.hardware.Swerve;
+import frc.team4013.frc2026.opmodes.Opmode;
+import frc.team4013.frc2026.hardware.Grinder;
+import frc.team4013.frc2026.hardware.Swerve;
 
 public class SwerveOdo implements Opmode {
     Swerve drive;

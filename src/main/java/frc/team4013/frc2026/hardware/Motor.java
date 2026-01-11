@@ -1,4 +1,4 @@
-package frc.robot.hardware;
+package frc.team4013.frc2026.hardware;
 
 import com.ctre.phoenix6.CANBus;
 import com.ctre.phoenix6.StatusSignal;

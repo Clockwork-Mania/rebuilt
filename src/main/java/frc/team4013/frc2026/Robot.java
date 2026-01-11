@@ -1,27 +1,13 @@
-package frc.robot;
+package frc.team4013.frc2026;
 
-import static edu.wpi.first.units.Units.Rotation;
-
-import java.io.File;
-import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.List;
-
-import edu.wpi.first.math.geometry.Pose2d;
-import edu.wpi.first.math.geometry.Rotation2d;
-import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.shuffleboard.BuiltInWidgets;
-import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
-import edu.wpi.first.wpilibj.shuffleboard.WidgetType;
 import edu.wpi.first.wpilibj.smartdashboard.Field2d;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.opmodes.*;
-import frc.robot.hardware.*;
-import frc.robot.opmodes.teleop.SwerveTeleop;
+import frc.team4013.frc2026.opmodes.*;
+import frc.team4013.frc2026.hardware.*;
 
 public class Robot extends TimedRobot {
 	Grinder bot;

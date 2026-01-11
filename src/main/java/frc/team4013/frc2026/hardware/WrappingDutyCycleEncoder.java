@@ -1,4 +1,4 @@
-package frc.robot.hardware;
+package frc.team4013.frc2026.hardware;
 
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 

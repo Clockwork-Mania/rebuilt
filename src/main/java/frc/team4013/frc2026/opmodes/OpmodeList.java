@@ -1,7 +1,6 @@
-package frc.robot.opmodes;
+package frc.team4013.frc2026.opmodes;
 // import frc.robot.opmodes.auto.*;
-import frc.robot.opmodes.teleop.*;
-import frc.robot.opmodes.test.*;
+import frc.team4013.frc2026.opmodes.teleop.*;
 
 public class OpmodeList {
     public static class NamedOpmode {

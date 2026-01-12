@@ -2,9 +2,9 @@ package frc.team4013.frc2026.opmodes.test;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.team4013.frc2026.Utility;
-import frc.team4013.frc2026.hardware.*;
 import frc.team4013.frc2026.opmodes.Opmode;
 import frc.team4013.frc2026.opmodes.teleop.CWController;
+import frc.team4013.frc2026.subsystems.*;
 
 public class IMUTest implements Opmode {
     Grinder bot;

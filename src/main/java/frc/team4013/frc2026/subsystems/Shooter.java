@@ -1,9 +1,7 @@
-package frc.team4013.frc2026.hardware;
+package frc.team4013.frc2026.subsystems;
 
-import com.ctre.phoenix6.hardware.TalonFX;
-import frc.team4013.frc2026.Utility;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4013.frc2026.opmodes.Opmode;
+import frc.team4013.frc2026.Utility;
 
 
 public class Shooter{

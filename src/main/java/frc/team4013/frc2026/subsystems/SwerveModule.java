@@ -1,4 +1,4 @@
-package frc.team4013.frc2026.hardware;
+package frc.team4013.frc2026.subsystems;
 
 import com.ctre.phoenix6.hardware.CANcoder;
 import com.ctre.phoenix6.signals.NeutralModeValue;
@@ -7,7 +7,7 @@ import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
 import frc.team4013.frc2026.Utility;
-import frc.team4013.frc2026.hardware.Motor.Direction;
+import frc.team4013.frc2026.subsystems.Motor.Direction;
 
 public class SwerveModule {
     public Motor power, spin;

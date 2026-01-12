@@ -1,4 +1,4 @@
-package frc.team4013.frc2026.hardware;
+package frc.team4013.frc2026.subsystems;
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;

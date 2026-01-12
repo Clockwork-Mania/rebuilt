@@ -3,9 +3,9 @@ package frc.team4013.frc2026.opmodes.teleop;
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4013.frc2026.hardware.Grinder;
-import frc.team4013.frc2026.hardware.Swerve;
 import frc.team4013.frc2026.opmodes.Opmode;
+import frc.team4013.frc2026.subsystems.Grinder;
+import frc.team4013.frc2026.subsystems.Swerve;
 
 public class SwerveOdo implements Opmode {
     Swerve drive;

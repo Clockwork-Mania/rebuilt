@@ -1,8 +1,7 @@
 package frc.team4013.frc2026.opmodes.test;
-import edu.wpi.first.wpilibj.XboxController;
-import frc.team4013.frc2026.opmodes.teleop.CWController;
-import frc.team4013.frc2026.hardware.Grinder;
 import frc.team4013.frc2026.opmodes.Opmode;
+import frc.team4013.frc2026.opmodes.teleop.CWController;
+import frc.team4013.frc2026.subsystems.Grinder;
 
 public class testShooter implements Opmode{
     private Grinder bot;
@@ -16,7 +15,7 @@ public class testShooter implements Opmode{
 
     public void periodic(){
         bot.shooter.updateShooter();
-        
+
         if (controller.getAButtonPressed()){
             bot.shooter.turnOnShooter();
         }
@@ -29,6 +28,6 @@ public class testShooter implements Opmode{
         else if (controller.getRightButtonPressed()){
             bot.shooter.decreaseSpeed();
         }
-        
+
     }
 }
